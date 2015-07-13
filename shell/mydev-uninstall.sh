@@ -1,3 +1,4 @@
 #!/bin/bash
 path=$(dirname $0)/../
-sudo rm -rf $path
+cd $path
+sudo rm -rf $(pwd)
