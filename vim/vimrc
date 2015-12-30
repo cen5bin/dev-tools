@@ -67,7 +67,11 @@ let Tlist_Sort_Type ='name'
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_WinWidth = 32
 let Tlist_Use_Right_Window = 1
+if has('mac')
+let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
+elseif has('unix')
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
+endif
 map <F1> :TlistToggle <CR>
 
 " 关于ctrlp的配置
