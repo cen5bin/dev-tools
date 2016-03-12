@@ -6,7 +6,7 @@ if [ $# -lt 1 ]; then
 fi
 
 if [ $1 = "-i" ]; then
-    echo "cc" 
+    docker rmi `docker images  | grep none | awk '{print $3}'`
 elif [ $1 = "-c" ]; then
     docker rm `docker ps -a -q`
 fi
